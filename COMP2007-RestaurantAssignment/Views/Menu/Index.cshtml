@@ -1,0 +1,17 @@
+﻿@model IEnumerable<COMP2007_RestaurantAssignment.Models.Categories>
+
+@{
+    ViewBag.Title = "Menu";
+}
+
+<h2>Browse Menu</h2>
+<p>
+    Select from @Model.Count()
+    Menu Categories:
+</p>
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.FoodCategory,"Browse", new { category = category.FoodCategory })</li>
+    }
+</ul>

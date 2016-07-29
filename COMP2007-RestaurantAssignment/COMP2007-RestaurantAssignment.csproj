@@ -175,6 +175,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Appetizers.cs" />
+    <Compile Include="Models\Categories.cs" />
+    <Compile Include="Models\Desserts.cs" />
+    <Compile Include="Models\Drinks.cs" />
+    <Compile Include="Models\Entres.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -238,10 +243,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Menu\Categories.cshtml" />
+    <Content Include="Views\Menu\Browse.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Menu\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

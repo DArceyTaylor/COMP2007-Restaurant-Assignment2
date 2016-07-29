@@ -3,32 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using COMP2007_RestaurantAssignment.Models;
 
 namespace COMP2007_RestaurantAssignment.Controllers
 {
     public class MenuController : Controller
     {
         // GET: /Menu/Index
-        public string Index()
+        public ActionResult Index()
         {
-            return "Hello from Menu.Index()";
+            var menuCategories = new List<Categories>
+    {
+        new Categories { FoodCategory = "Appetizers"},
+        new Categories { FoodCategory = "Entres"},
+        new Categories { FoodCategory = "Dessert"},
+        new Categories { FoodCategory = "Drinks"}
+    };
+            return View(menuCategories);
         }
         //
         // GET: /Menu/Browse?category=Appetizers
-        public string Browse(string category)
+        public ActionResult Browse(string category)
         {
-            string message = HttpUtility.HtmlEncode("Menu.Browse, Category = "
-        + category);
-
-            return message;
+            var categoryModel = new Categories { FoodCategory = category };
+            return View(categoryModel);
         }
         //
         // GET: /Menu/Details/5
-        public string Details(int id)
+        public ActionResult Details(int id)
         {
-            string message = "Menu.Details, ID = " + id;
-
-            return message;
+            var category = new Categories { FoodCategory = "Category " + id };
+            return View(category);
         }
     }
     
